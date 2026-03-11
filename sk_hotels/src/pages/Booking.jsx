@@ -1,4 +1,4 @@
-import React, { useState, useEffect } from 'react'
+import React, { useState } from 'react'
 import { useParams } from 'react-router-dom'
 
 const rooms = [
@@ -137,12 +137,9 @@ export default function Booking() {
   const [specialRequests, setSpecialRequests] = useState('')
   const [isSubmitting, setIsSubmitting] = useState(false)
   const [showConfirmation, setShowConfirmation] = useState(false)
+  const [confirmationNumber, setConfirmationNumber] = useState('')
 
-  useEffect(() => {
-    if (roomId) {
-      setSelectedRoom(roomId)
-    }
-  }, [roomId])
+  
 
   const calculateNights = () => {
     if (checkIn && checkOut) {
@@ -168,7 +165,11 @@ export default function Booking() {
 
   const handleSubmit = (e) => {
     e.preventDefault()
-    setIsSubmitting(true)
+    setIsSubmitting()
+    
+    // Generate confirmation number
+    const confirmation = `SK${Date.now().toString().slice(-8)}`
+    setConfirmationNumber(confirmation)
     
     // Simulate form submission
     setTimeout(() => {
@@ -198,7 +199,7 @@ export default function Booking() {
             <div className="bg-gray-50 rounded-xl p-6 mb-6 text-left">
               <h3 className="font-semibold text-gray-900 mb-4">Booking Details</h3>
               <div className="space-y-2 text-sm">
-                <p><span className="text-gray-500">Confirmation #:</span> <span className="font-medium">SK{Date.now().toString().slice(-8)}</span></p>
+                <p><span className="text-gray-500">Confirmation #:</span> <span className="font-medium">{confirmationNumber}</span></p>
                 <p><span className="text-gray-500">Room:</span> <span className="font-medium">{selectedRoomDetails?.name}</span></p>
                 <p><span className="text-gray-500">Check-in:</span> <span className="font-medium">{checkIn}</span></p>
                 <p><span className="text-gray-500">Check-out:</span> <span className="font-medium">{checkOut}</span></p>
