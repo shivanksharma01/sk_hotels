@@ -28,12 +28,12 @@ export default function About() {
   ];
 
   return (
-    <div className="bg-gray-50 py-24 px-6">
+    <div className="bg-white py-24 px-6">
       <div className="max-w-7xl mx-auto">
 
         {/* Hero */}
         <div className="text-center mb-16">
-          <h1 className="text-4xl md:text-5xl font-bold text-gray-800 mb-4">
+          <h1 className="text-4xl md:text-5xl font-bold text-gray-900 mb-4">
             About SK Hotels
           </h1>
           <p className="text-gray-600 max-w-2xl mx-auto">
@@ -52,7 +52,7 @@ export default function About() {
           />
 
           <div>
-            <h2 className="text-3xl font-bold text-gray-800 mb-4">
+            <h2 className="text-3xl font-bold text-gray-900 mb-4">
               Our Story
             </h2>
             <p className="text-gray-600 mb-4 leading-relaxed">
@@ -70,7 +70,7 @@ export default function About() {
 
         {/* Features */}
         <div className="mb-20">
-          <h2 className="text-3xl font-bold text-center text-gray-800 mb-12">
+          <h2 className="text-3xl font-bold text-center text-gray-900 mb-12">
             Why Choose Us
           </h2>
 
@@ -78,9 +78,9 @@ export default function About() {
             {features.map((item, index) => (
               <div
                 key={index}
-                className="bg-white p-6 rounded-xl shadow hover:shadow-lg transition"
+                className="bg-gray-50 p-6 rounded-xl shadow hover:shadow-lg transition"
               >
-                <h3 className="text-xl font-semibold mb-2 text-gray-800">
+                <h3 className="text-xl font-semibold mb-2 text-gray-900">
                   {item.title}
                 </h3>
                 <p className="text-gray-600 text-sm">{item.desc}</p>
@@ -90,12 +90,12 @@ export default function About() {
         </div>
 
         {/* Stats */}
-        <div className="bg-blue-600 text-white rounded-xl py-12 px-6 mb-20">
+        <div className="bg-gray-900 text-white rounded-xl py-12 px-6 mb-20">
           <div className="grid md:grid-cols-4 text-center gap-8">
             {stats.map((stat, index) => (
               <div key={index}>
                 <h3 className="text-3xl font-bold">{stat.number}</h3>
-                <p className="text-blue-100">{stat.label}</p>
+                <p className="text-gray-400">{stat.label}</p>
               </div>
             ))}
           </div>
@@ -103,14 +103,14 @@ export default function About() {
 
         {/* Call To Action */}
         <div className="text-center">
-          <h2 className="text-3xl font-bold text-gray-800 mb-4">
+          <h2 className="text-3xl font-bold text-gray-900 mb-4">
             Experience Luxury Today
           </h2>
           <p className="text-gray-600 mb-6">
             Book your stay at SK Hotels and enjoy a memorable hospitality experience.
           </p>
 
-          <button className="bg-blue-600 text-white px-8 py-3 rounded-lg font-semibold hover:bg-blue-700 transition">
+          <button className="bg-gray-900 text-white px-8 py-3 rounded-lg font-semibold hover:bg-gray-800 transition">
             Book Your Stay
           </button>
         </div>
