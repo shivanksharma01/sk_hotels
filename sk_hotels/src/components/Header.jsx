@@ -44,7 +44,7 @@ export default function Header() {
         <div className="md:hidden bg-white border-t border-gray-100">
           <ul className="flex flex-col list-none m-0 p-4 gap-3">
             <li><Link to="/" onClick={toggleMenu} className="text-gray-600 no-underline text-sm font-medium block py-2">Home</Link></li>
-            <li><a href="#about" onClick={toggleMenu} className="text-gray-600 no-underline text-sm font-medium block py-2">About</a></li>
+            <li><Link to="/about" onClick={toggleMenu} className="text-gray-600 no-underline text-sm font-medium block py-2">About</Link></li>
             <li><Link to="/" onClick={toggleMenu} className="text-gray-600 no-underline text-sm font-medium block py-2">Rooms</Link></li>
             <li><Link to="/booking" onClick={toggleMenu} className="text-gray-600 no-underline text-sm font-medium block py-2">Booking</Link></li>
             <li><Link to="/contact" onClick={toggleMenu} className="text-gray-600 no-underline text-sm font-medium block py-2">Contact</Link></li>
