@@ -5,6 +5,7 @@ import Room from './pages/Room'
 import Booking from './pages/Booking'
 import Contact from './pages/Contact'
 import Footer from './components/Footer'
+import About from './pages/About'
 
 function App() {
 
@@ -23,6 +24,8 @@ function App() {
         <Route path="/booking" element={<Booking />} />
         <Route path="/booking/:roomId" element={<Booking />} />
         <Route path="/contact" element={<Contact />} />
+        <Route path="/about" element={<About />} />
+
       </Routes>
       <Footer/>
     </Router>

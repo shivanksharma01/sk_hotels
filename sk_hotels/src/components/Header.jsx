@@ -17,7 +17,7 @@ export default function Header() {
         <nav className="hidden md:flex">
           <ul className="flex gap-6 list-none m-0 p-0">
             <li><Link to="/" className="text-gray-600 no-underline text-sm font-medium hover:text-red-500 transition-colors duration-300">Home</Link></li>
-            <li><a href="#about" className="text-gray-600 no-underline text-sm font-medium hover:text-red-500 transition-colors duration-300">About</a></li>
+            <li><Link to="/about" className="text-gray-600 no-underline text-sm font-medium hover:text-red-500 transition-colors duration-300">About</Link></li>
             <li><Link to="/" className="text-gray-600 no-underline text-sm font-medium hover:text-red-500 transition-colors duration-300">Rooms</Link></li>
             <li><Link to="/booking" className="text-gray-600 no-underline text-sm font-medium hover:text-red-500 transition-colors duration-300">Booking</Link></li>
             <li><Link to="/contact" className="text-gray-600 no-underline text-sm font-medium hover:text-red-500 transition-colors duration-300">Contact</Link></li>
